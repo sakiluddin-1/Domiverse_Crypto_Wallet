@@ -1,114 +1,137 @@
-# MetaMass Clone Wallet
+🦊 Domiverse Wallet – Decentralized Web3 Chrome Extension
 
-Building and Deploying a DeFi MetaMass Wallet Clone for Secure Transactions
+A secure, lightweight, decentralized crypto wallet built as a Chrome Extension, allowing users to create accounts, manage assets, and send transactions on EVM-compatible blockchains.
 
-MetaMass offers a revolutionary approach to decentralized finance (DeFi) with our wallet clone project. Drawing inspiration from the acclaimed MetaMask, our MetaMass clone empowers users to securely manage their digital assets, interact with decentralized applications (dApps), and participate in the vibrant DeFi ecosystem.
+🚀 Built with JavaScript, Node.js, MongoDB, and ethers.js
 
-Our MetaMass clone prioritizes security, usability, and interoperability, ensuring that users have full control over their funds while enjoying seamless access to a wide range of DeFi protocols and services. By replicating MetaMask's features and functionalities, MetaMass provides a familiar and intuitive user experience, making it easy for both novice and experienced users to navigate the decentralized landscape.
+✨ Features
 
-## Project Overview
+🔐 Create a new wallet (public address + private key)
 
-![alt text](https://www.daulathussain.com/wp-content/uploads/2023/06/build-metamask-clone-chrome-extension.jpg)
+🔑 Login to existing wallet
 
-## Instruction
+📥 Import wallet using private key
 
-Kindly follow the following Instructions to run the project in your system and install the necessary requirements
+💰 Check ETH balance
 
+💸 Send transactions to other addresses
 
-- [Final Source Code](https://www.theblockchaincoders.com/sourceCode/build-metamask-clone-chrome-extension-form-scratch)
+🪙 View ERC-20 tokens
 
-#### Setup Video
-- [Final Code Setup video](https://youtu.be/p04GRmC7rA0?si=wLdiPs6RMHZg99LH)
+🌐 Switch between networks (Ethereum, Sepolia, Polygon)
 
-```https://code.visualstudio.com/download
-  WATCH: Setup & Demo Of Project
-```
+🧾 View account list
 
-#### Install Vs Code Editor
+📋 Copy wallet address easily
 
-```https://code.visualstudio.com/download
-  GET: VsCode Editor
-```
+🖥️ Tech Stack
+Frontend (Chrome Extension)
 
-#### NodeJs & NPM Version
+HTML
 
-```https://nodejs.org/en/download
-  NodeJs: v18.12.1
-  NPM: 8.19.2
-```
+CSS
 
-#### Clone Starter File
+Vanilla JavaScript
 
-```https://github.com/daulathussain/Airdrop-Crypto-Starter-File
-  GET: Project Starter File Download
-```
+Chrome Extension APIs
 
+Blockchain Integration
 
-All you need to follow the complete project and follow the instructions which are explained in the tutorial by Daulat
+ethers.js
 
-## Final Code Instruction
+Backend API
 
-If you download the final source code then you can follow the following instructions to run the Dapp successfully
+Node.js
 
-#### Setup Video
+Express.js
 
-```https://code.visualstudio.com/download
-  WATCH: Setup & Demo Of Project
-```
+MongoDB (Mongoose)
 
-#### Final Source Code
+📁 Project Structure
+Domiverse-Wallet/
+│
+├── chromeapi/                 # Chrome extension frontend
+│   ├── popup.html
+│   ├── popup.js
+│   ├── style.css
+│   ├── assets/
+│
+├── backend/
+│   ├── app.js
+│   ├── server.js
+│   ├── models/
+│   ├── routes/
+│   ├── controllers/
+│
+├── config.env
+├── package.json
+└── README.md
+⚙️ Installation & Setup
+1️⃣ Clone the repository
+git clone https://github.com/your-username/domiverse-wallet.git
+cd domiverse-wallet
+2️⃣ Install dependencies
+npm install
+3️⃣ Setup Environment Variables
 
-```https://www.theblockchaincoders.com/SourceCode
-  Download the Final Source Code
-```
+Create a file named config.env in the root:
 
-#### Install Vs Code Editor
+DATABASE=mongodb+srv://<username>:<password>@cluster.mongodb.net/
+DATABASE_PASSWORD=yourpassword
+PORT=3000
+4️⃣ Run backend server
+npm run start
 
-```https://code.visualstudio.com/download
-  GET: VsCode Editor
-```
+Server will run at:
 
-#### NodeJs & NPM Version
+http://localhost:3000
+5️⃣ Load Chrome Extension
 
-```https://nodejs.org/en/download
-  NodeJs: v18.12.1
-  NPM: 8.19.2
-```
+Open Chrome
 
+Go to chrome://extensions/
 
-#### Test Faucets
+Enable Developer Mode
 
-Alchemy will provide you with some free test faucets which you can transfer to your wallet address for deploying the contract
+Click Load Unpacked
 
-```https://www.alchemy.com/faucets
-  Get: Free Test Faucets
-```
+Select the chromeapi folder
 
-#### RemixID
+🔐 Security Notes
 
-We are using RemixID for deploying the contract and generation of the ABI in the project, but you can use any other tools like Hardhat, etc.
+Private keys are stored securely in local storage (for development)
 
-```https://remix-project.org
-  OPEN: RemixID
-```
+In production, encryption should be added
 
-#### Polygon Mumbai
+Never expose your private key publicly
 
-```https://mumbai.polygonscan.com/
-  OPEN: Polygon Mumbai
-```
+📡 API Endpoints
+Tokens
+GET /api/v1/tokens/alltoken
+Accounts
+GET /api/v1/account/allaccount
+📸 Screenshots
 
-## Important Links
+(Add screenshots here for UI, wallet dashboard, transfer page, etc.)
 
-- [Get Pro Blockchain Developer Course](https://www.theblockchaincoders.com/pro-nft-marketplace)
-- [Support Creator](https://bit.ly/Support-Creator)
-- [All Projects Source Code](https://www.theblockchaincoders.com/SourceCode)
+🚀 Future Improvements
 
+🔒 Encrypt private keys using AES
 
-## Authors
+🧠 Add biometric / password protection
 
-- [@theblockchaincoders.com](https://www.theblockchaincoders.com/)
-- [@consultancy](https://www.theblockchaincoders.com/consultancy)
-- [@youtube](https://www.youtube.com/@daulathussain)
+🔁 Add transaction history
 
+📊 Gas fee estimation
 
+🔗 WalletConnect integration
+
+🪙 Multi-chain support
+
+🤝 Contributing
+
+Pull requests are welcome. For major changes, please open an issue first.
+
+📄 License
+
+This project is licensed under the MIT License.
